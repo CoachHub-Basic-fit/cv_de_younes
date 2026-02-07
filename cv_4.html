@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Younes Maouche</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .cv-container {
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .sidebar {
+            width: 35%;
+            background: linear-gradient(180deg, #1a237e 0%, #283593 100%);
+            color: white;
+            padding: 30px 20px;
+        }
+
+        .main-content {
+            width: 65%;
+            padding: 30px 25px;
+            overflow: hidden;
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .profile-section h1 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .profile-section .subtitle {
+            font-size: 11px;
+            opacity: 0.9;
+            font-weight: 500;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 10px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+
+        .contact-info {
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 10px;
+        }
+
+        .contact-item .icon {
+            width: 16px;
+            margin-right: 8px;
+            font-size: 12px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .main-content .section-title {
+            color: #1a237e;
+            border-bottom: 2px solid #1a237e;
+            margin-top: 15px;
+        }
+
+        .main-content .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            margin-bottom: 8px;
+            font-size: 10px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .skills-list li:before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: #ffc107;
+        }
+
+        .languages .lang-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 10px;
+        }
+
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .interest-tag {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 9px;
+        }
+
+        .objective {
+            font-size: 10px;
+            line-height: 1.5;
+            color: #333;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .objective strong {
+            color: #1a237e;
+            font-weight: 600;
+        }
+
+        .experience-item, .education-item {
+            margin-bottom: 15px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-weight: bold;
+            color: #1a237e;
+            font-size: 11px;
+        }
+
+        .company {
+            font-size: 10px;
+            color: #555;
+            font-style: italic;
+        }
+
+        .date {
+            font-size: 9px;
+            color: #777;
+            background: #f5f5f5;
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .experience-item ul {
+            margin-left: 15px;
+            margin-top: 5px;
+        }
+
+        .experience-item li {
+            font-size: 9px;
+            line-height: 1.4;
+            margin-bottom: 3px;
+            color: #444;
+        }
+
+        .experience-item li strong {
+            color: #1a237e;
+            font-weight: 600;
+        }
+
+        .education-item h3 {
+            font-size: 11px;
+            color: #1a237e;
+            margin-bottom: 3px;
+        }
+
+        .education-item p {
+            font-size: 9px;
+            color: #666;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .cv-container {
+                box-shadow: none;
+                page-break-after: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="profile-section">
+                <h1>YOUNES<br>MAOUCHE</h1>
+                <div class="subtitle">CONTRAT D'APPRENTISSAGE 12 MOIS</div>
+            </div>
+
+            <div class="contact-info">
+                <div class="section-title">CONTACT</div>
+                <div class="contact-item">
+                    <span class="icon">📱</span>
+                    <span>06 58 91 56 61</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">📍</span>
+                    <span>PARIS 19ème</span>
+                </div>
+                <div class="contact-item">
+                    <span class="icon">✉️</span>
+                    <span>younes.maouche.professionel@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="skills">
+                <div class="section-title">COMPÉTENCES</div>
+                <ul class="skills-list">
+                    <li>Communication client</li>
+                    <li>Empathie & patience</li>
+                    <li>Rigueur & organisation</li>
+                    <li>Microsoft Excel</li>
+                    <li>Logiciels comptables (Cegid, Cogilog)</li>
+                    <li>Gestion relation client</li>
+                    <li>Esprit d'équipe</li>
+                </ul>
+            </div>
+
+            <div class="languages">
+                <div class="section-title">LANGUES</div>
+                <div class="lang-item">
+                    <span>Français</span>
+                    <span>Natif</span>
+                </div>
+                <div class="lang-item">
+                    <span>Arabe</span>
+                    <span>Courant</span>
+                </div>
+                <div class="lang-item">
+                    <span>Anglais</span>
+                    <span>Intermédiaire</span>
+                </div>
+                <div class="lang-item">
+                    <span>Espagnol</span>
+                    <span>Intermédiaire</span>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-title">CENTRES D'INTÉRÊT</div>
+                <div class="interests">
+                    <span class="interest-tag">💪 Musculation</span>
+                    <span class="interest-tag">📊 Finance</span>
+                    <span class="interest-tag">🎭 Culture</span>
+                    <span class="interest-tag">🤝 Bénévolat</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="section-title">OBJECTIF PROFESSIONNEL</div>
+            <p class="objective">
+                Passionné par le secteur du <strong>fitness</strong> et fort d'une <strong>expérience réussie</strong> chez Basic Fit, je souhaite mettre mes <strong>compétences commerciales et relationnelles</strong> au service de Fitness Park. Mon parcours en <strong>gestion</strong> et ma connaissance du milieu sportif me permettent d'allier <strong>rigueur administrative</strong> et <strong>approche client personnalisée</strong> pour contribuer au <strong>développement commercial</strong> de votre établissement.
+            </p>
+
+            <div class="section-title">EXPÉRIENCES PROFESSIONNELLES</div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Agent d'accueil</div>
+                        <div class="company">BASIC FIT</div>
+                    </div>
+                    <span class="date">2024-2025</span>
+                </div>
+                <ul>
+                    <li><strong>Accueil et orientation</strong> de la clientèle</li>
+                    <li><strong>Gestion administrative</strong> et tri des factures</li>
+                    <li><strong>Suivi personnalisé</strong> des messages clients</li>
+                    <li>Contribution à la <strong>satisfaction client</strong></li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Gestionnaire Financier</div>
+                        <div class="company">Sonia Delaunay</div>
+                    </div>
+                    <span class="date">10/2023 - 12/2023</span>
+                </div>
+                <ul>
+                    <li><strong>Gestion du matériel</strong> de l'établissement</li>
+                    <li><strong>Gestion et suivi du budget</strong></li>
+                    <li>Préparation de <strong>documents comptables</strong></li>
+                    <li>Vérification des <strong>procédures administratives</strong></li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Assistant Comptable</div>
+                        <div class="company">B.L.L Audit Conseil</div>
+                    </div>
+                    <span class="date">05/2023 - 06/2023</span>
+                </div>
+                <ul>
+                    <li><strong>Vérification des comptes</strong> de l'entreprise</li>
+                    <li><strong>Gestion de la clientèle</strong></li>
+                    <li><strong>Analyse financière</strong> et lettrage des comptes</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Bénévolat</div>
+                        <div class="company">CTW - Engagement associatif</div>
+                    </div>
+                    <span class="date"></span>
+                </div>
+                <ul>
+                    <li>Apport de soutien lors de <strong>maraudes</strong></li>
+                    <li><strong>Estimation budgétaire</strong> et campagnes de dons</li>
+                    <li>Création de <strong>fiches publicitaires</strong></li>
+                </ul>
+            </div>
+
+            <div class="section-title">FORMATION</div>
+            
+            <div class="education-item">
+                <h3>BTS CG (Comptabilité Gestion)</h3>
+                <p>Lycée Jean Lurçat 75013 • 2022-2023</p>
+            </div>
+
+            <div class="education-item">
+                <h3>BAC STMG Gestion Finance</h3>
+                <p>Lycée Arago 75012 • 2019-2020</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
