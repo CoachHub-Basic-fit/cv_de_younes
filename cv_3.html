@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>CV - Younes Maouche</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 30px 10px;
+        }
+
+        /* Feuille centrale, adaptée écran + imprimable */
+        .page {
+            width: 100%;
+            max-width: 900px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        /* HEADER */
+        .header {
+            padding: 32px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+        }
+
+        .name {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.18);
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        .contact-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            font-size: 14px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .contact-item a {
+            color: inherit;
+        }
+
+        /* CONTENU */
+        .content {
+            padding: 24px 40px 32px;
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 28px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        h2.section-title {
+            font-size: 18px;
+            color: #667eea;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+        }
+
+        /* Objectif */
+        .objectif-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: #fff;
+            border-radius: 8px;
+            padding: 14px 18px;
+            font-size: 14px;
+        }
+
+        /* Expériences */
+        .experience {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 6px;
+            padding: 10px 14px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .experience .poste {
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .experience .entreprise {
+            color: #667eea;
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+
+        .experience .date {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 6px;
+        }
+
+        .experience ul {
+            padding-left: 18px;
+            font-size: 13px;
+        }
+
+        .experience li {
+            margin-bottom: 3px;
+        }
+
+        /* Formation */
+        .formation-item {
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .formation-item .diplome {
+            font-weight: 600;
+        }
+
+        .formation-item .ecole {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Compétences / langues / intérêts */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tag {
+            background: #f3f4ff;
+            border-radius: 999px;
+            padding: 4px 10px;
+            font-size: 13px;
+        }
+
+        .langue-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8f9fa;
+            border-radius: 6px;
+            padding: 6px 10px;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .langue-row span:nth-child(2) {
+            color: #667eea;
+            font-weight: 500;
+        }
+
+        /* Responsive simple */
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+                padding: 20px 18px 24px;
+            }
+
+            .header {
+                padding: 24px 18px;
+            }
+
+            .name {
+                font-size: 26px;
+            }
+        }
+
+        /* Impression : pas de fond gris ni ombre */
+        @media print {
+            body {
+                background: #fff;
+                padding: 0;
+            }
+            .page {
+                box-shadow: none;
+                border-radius: 0;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="header">
+        <div class="name">YOUNES MAOUCHE</div>
+        <div class="subtitle">CONTRAT D'APPRENTISSAGE 12 MOIS</div>
+
+        <div class="contact-row">
+            <div class="contact-item">📞 <a href="tel:0658915661">06 58 91 56 61</a></div>
+            <div class="contact-item">📍 PARIS 19ème</div>
+            <div class="contact-item">✉️ younes.maouche.professionel@gmail.com</div>
+        </div>
+    </header>
+
+    <main class="content">
+        <!-- Objectif -->
+        <section class="full-width">
+            <h2 class="section-title">Objectif professionnel</h2>
+            <div class="objectif-box">
+                Passionné par le secteur du fitness et fort d'une expérience réussie chez Basic Fit, je souhaite mettre mes compétences commerciales et relationnelles au service de Fitness Park. Mon parcours en gestion et ma connaissance du milieu sportif me permettent d'allier rigueur administrative et approche client personnalisée pour contribuer au développement commercial de votre établissement.
+            </div>
+        </section>
+
+        <!-- Colonne gauche -->
+        <section>
+            <h2 class="section-title">Expériences professionnelles</h2>
+
+            <article class="experience">
+                <div class="poste">Agent d'accueil</div>
+                <div class="entreprise">BASIC FIT</div>
+                <div class="date">2024 – 2025</div>
+                <ul>
+                    <li>Accueil et orientation de la clientèle.</li>
+                    <li>Gestion administrative et tri des factures.</li>
+                    <li>Suivi personnalisé des adhérents.</li>
+                </ul>
+            </article>
+
+            <!-- Ajoute d'autres expériences ici si tu veux -->
+        </section>
+
+        <section>
+            <h2 class="section-title">Formation</h2>
+
+            <div class="formation-item">
+                <div class="diplome">Titre / Diplôme en cours</div>
+                <div class="ecole">Établissement – Année</div>
+            </div>
+        </section>
+
+        <!-- Colonne droite -->
+        <section>
+            <h2 class="section-title">Compétences</h2>
+            <div class="tags">
+                <span class="tag">Relation client</span>
+                <span class="tag">Vente / conseil</span>
+                <span class="tag">Gestion administrative</span>
+                <span class="tag">Outils bureautiques</span>
+                <span class="tag">Esprit d'équipe</span>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Langues</h2>
+            <div class="langue-row">
+                <span>Français</span>
+                <span>Courant</span>
+            </div>
+            <div class="langue-row">
+                <span>Anglais</span>
+                <span>Intermédiaire</span>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Centres d'intérêt</h2>
+            <div class="tags">
+                <span class="tag">Musculation</span>
+                <span class="tag">Fitness</span>
+                <span class="tag">Sport en équipe</span>
+                <span class="tag">Développement personnel</span>
+            </div>
+        </section>
+    </main>
+</div>
+</body>
+</html>
